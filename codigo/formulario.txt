@@ -1,0 +1,34 @@
+ <div class="col-md-6 offset-md-3">
+
+                      <div class="panel panel-primary">
+                      <!-- default panel contents -->
+                      <div class="panel-heading">Registrar Empleados</div>
+                      <div class="panel-body">
+                      <!-- Inicia la tabla -->
+                      <table width="100%">
+                      <form action="alta_empleados.php" method="post" id="frmaltaempleados">
+                      <tr class="espacio"> 
+                      <td align="right"> <label for="nombre">Nombre:</label></td><td><input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese el nombre" autofocus required></td>
+                      </tr> 
+                      <tr class="espacio">
+                      <td align="right"><label for="depto">Departamento:</label></td><td><select  class="form-control" name="depto" id="depto" >
+                      <option value="Almacén">Almacén</option>
+                      <option value="Crédito">Crédito</option>
+                      <option value="Gerencia">Gerencia</option>
+                      <option value="Ventas">Ventas</option>
+                      </select>
+                      </td>
+                      </tr>
+                    
+                      
+                     
+                     
+                      <tr>
+                      <td align="center" colspan="2"><input type="submit"  class="btn btn-outline-warning" value="Registrar"  title="Registrar"></td>
+                      </tr>
+                  
+                      </table>
+                      <!-- termina la tabla -->
+                      </div>
+                      </div>
+                      </div>

@@ -1,0 +1,12 @@
+ <script language="javascript"> 
+    function confirmar(id_emp){ 
+    confirmar=confirm("\u00bfRealmente deseas eliminar el registro?"); 
+    if (confirmar) 
+    {
+    document.location="eliminar_empleado.php?opcion="+id_emp;
+    }
+    else  
+    {
+    } 
+    }
+    </script>

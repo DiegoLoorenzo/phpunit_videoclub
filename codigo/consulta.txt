@@ -1,0 +1,31 @@
+<table  class="table table-bordered" border="0" cellspacing="0">
+    <?php
+      require_once("../bd/conexion.php");
+        
+      $result = mysqli_query($link, "SELECT * FROM ");
+      echo "<table class='table table-striped'>";
+      echo "<tr>
+                                      
+                                                       
+                  <th class='success'>Nombre</th>
+                                                    
+            </tr>";
+            while  (($row = mysqli_fetch_array($result))!=NULL)
+            {
+            $id_emp = $row['id_emp'];
+           
+            
+           
+                                                
+            echo "<tr>
+            <td class='active'>$nombre</td>
+           
+                      
+            <td class='active align='center'><center><a href='modificar.php?id_emp=$id_emp'><i class='fa fa-address-book fa-4'></i></a></center></td>
+            <td class='active' align='center'><a onClick='confirmar($id_emp)'><i class='fa fa-times fa-4'></i></a></td>
+              
+            </tr>";    
+            }
+            echo "</table>";
+            ?>                                                                                                                              
+            </table> 

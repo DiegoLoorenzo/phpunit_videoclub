@@ -1,0 +1,33 @@
+<?php
+                      require_once("../bd/conexion.php");
+                      $opcion = $_GET['id_emp'];
+                      $result=mysqli_query($link,"SELECT * FROM empleados where id_emp='$opcion'");
+                      $consulta = mysqli_fetch_array($result);
+                ?>
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------
+
+<input type="hidden" class="form-control" name="id_emp" id="id_emp" value="<?php echo $consulta['id_emp'];?>">
+
+-------------------------------------------------------------------------------------------------------------------
+
+ <?php if ($consulta['sexo'] =="Femenino")
+                               {
+                                    echo"<option value='Masculino'>Masculino</option>";
+                                }
+                                else
+                                {                                                                                                          
+                                    echo"<option value='Femenino'>Femenino</option>";
+                                }
+                                ?>

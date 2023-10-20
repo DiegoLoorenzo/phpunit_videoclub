@@ -1,0 +1,13 @@
+<?php
+require_once("../bd/conexion.php");
+$id_emp = $_POST['id_emp'];
+
+
+
+  mysqli_query($link,"UPDATE empleados set nombre='$nombre'  where id_emp='$id_emp'"); 
+echo "
+                <script language='JavaScript'>
+                alert('Datos Modificados...');
+                document.location='empleados.php';
+                </script>";
+?>
