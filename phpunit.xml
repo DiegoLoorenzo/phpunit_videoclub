@@ -1,0 +1,17 @@
+<phpunit>
+    <!-- Otras configuraciones -->
+
+    <php>
+        <server name="KERNEL_CLASS" value="App\Kernel" />
+    </php>
+
+    <testsuites>
+        <testsuite name="AppBundle">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Utiliza el autoloader de Composer -->
+    <phpunit bootstrap="vendor/autoload.php">
+    </phpunit>
+</phpunit>

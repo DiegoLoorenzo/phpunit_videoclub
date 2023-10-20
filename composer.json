@@ -3,6 +3,7 @@
         "phpunit/phpunit": "10"
     },
     "require": {
-        "fzaninotto/faker": "^1.5"
+        "fzaninotto/faker": "^1.5",
+        "mindscape/raygun4php": "^2.3"
     }
 }
