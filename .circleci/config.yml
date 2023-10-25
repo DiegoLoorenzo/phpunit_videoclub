@@ -15,7 +15,7 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
-- checkout
+      - checkout
       - run: composer install
       - run: cp .env.example .env
       - run: php artisan key:generate
@@ -24,7 +24,7 @@ jobs:
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+# workflows:
+#   say-hello-workflow:
+#     jobs:
+#       - say-hello
