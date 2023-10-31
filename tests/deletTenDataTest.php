@@ -13,7 +13,7 @@ class deletTenDataTest extends TestCase
 
         // Verificar la conexión
         if ($conexion->connect_error) {
-            $this->fail("Error en la conexión a la base de datos: " . $conexion->connect_error);
+            $this->fail("Error en la conexión a la base de datoss: " . $conexion->connect_error);
         }
 
         // Consulta para eliminar 10 registros de la tabla (ajusta según tu necesidad)
