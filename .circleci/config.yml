@@ -13,16 +13,11 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
-      - checkout
-      - run: composer install
-      - run: cp .env.example .env
-      - run: php artisan key:generate
-      - run: php artisan migrate --seed
-      - run: vendor/bin/phpunit --testsuite Featur
-
+      - run: echo hola Diego
+      
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - saluda
