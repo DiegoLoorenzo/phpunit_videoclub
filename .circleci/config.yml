@@ -17,13 +17,19 @@ jobs:
       - checkout
       - run:
           name: "Install Dependencies"
-          command: npm install
+          command: |
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            npm install -g lighthouse
       - run:
           name: "Run Performance Tests"
           command: |
-            npm install -g lighthouse
-            lighthouse http://localhost:3000/index.html --output json > performance-report.json
+            php artisan serve --host=0.0.0.0 &
+            npm install
+            npm run production  # O el comando que compile tu frontend si es necesario
+            lighthouse http://localhost:8000/index.html --output json > performance-report.json
             # Agregar lógica para verificar las métricas y fallar si es necesario
+            kill $(lsof -t -i:8000)  # Detener el servidor de Laravel después de las pruebas
 
 workflows:
   version: 2
